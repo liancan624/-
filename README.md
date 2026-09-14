@@ -22,7 +22,8 @@ streamlit run frontend.py
 
 ## 更新代码架构
 最开始的代码全部堆在根目录，按照分层解耦、单一职责、代码与数据分离的原则，重构文件结构
-rag_demo/
+```
+knowledgehub-qa/
 ├── app/                     # 后端应用主包（所有后端业务代码）
 │   ├── __init__.py
 │   ├── main.py              # FastAPI 应用总入口（路由注册 + 全局初始化）
@@ -52,5 +53,5 @@ rag_demo/
 │   └── knowledge_bases/     # 原 knowledge_bases 目录迁移到此处
 ├── requirements.txt         # 项目依赖清单
 └── README.md                # 项目说明文档
-
+```
 
