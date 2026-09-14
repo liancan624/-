@@ -167,7 +167,7 @@ def chat(request: ChatRequest):
         raise HTTPException(status_code=400, detail=f"初始化模型失败：{str(e)}")
 
     # 创建检索器
-    retriever = vector_db.as_retriever(search_kwargs={"k", request.recall_top_k})
+    retriever = vector_db.as_retriever(search_kwargs={"k": request.recall_top_k})
 
     # 调用RAG问答
     try:
@@ -203,7 +203,7 @@ def list_knowledge_bases():
         for name in os.listdir(KB_ROOT_DIR):
             kb_path = os.path.join(KB_ROOT_DIR, name)
             if os.path.isdir(kb_path):
-                has_db = os.path.exists(os.path.join((kb_path, "chroma_db")))
+                has_db = os.path.exists(os.path.join(kb_path, "chroma_db"))
                 file_count = len([f for f in os.listdir(kb_path) if os.path.isfile(os.path.join(kb_path, f))])
                 kb_list.append({
                     "kb_id": name,
