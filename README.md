@@ -10,3 +10,5 @@
 项目使用 FastAPI 封装后端接口，在项目根目录执行下面命令启动服务：
 ```bash
 uvicorn app:app --host 0.0.0.0 --port 8000 --reload
+<img width="1862" height="689" alt="image" src="https://github.com/user-attachments/assets/692b8182-0eff-499c-8244-f0d0d59a7137" />
+核心接口测试
