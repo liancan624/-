@@ -20,9 +20,10 @@ EMBED_DEVICE = "cpu"
 THRESHOLD = 85
 
 # 大模型配置
-LLM_MODEL = "glm-5.3"
-LLM_API_KEY = "sk-8024a6bae7074f26913428b0ab98e833.xT1BApCXqltUpVBo"
-LLM_BASE_URL = "https://open.bigmodel.cn/api/paas/v4/"
+# 配置自己的大模型
+LLM_MODEL = ""
+LLM_API_KEY = ""
+LLM_BASE_URL = ""
 
 # 检索配置
 RECALL_TOP_K = 10   # 向量粗召回候选数量，建议为最终数量的3~5倍
